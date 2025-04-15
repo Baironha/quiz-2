@@ -16,8 +16,8 @@ class CifradoCesar:
                 resultado += self.alfabeto[nuevo_indice]
             else:
                 resultado += letra  # mantener caracteres que no están en el alfabeto
-
         return resultado
+
 
 # Interacción con el usuario
 texto_usuario = input("Ingresa el texto que deseas cifrar (solo letras): ")
@@ -31,12 +31,15 @@ print(f"Texto cifrado: {texto_cifrado}")
 
 
 
-#OPCION 2
 
+
+
+
+
+#OPCION 2
 class BubbleSort:
     def __init__(self, lista):
         self.lista = lista
-
     def ordenar(self):
         n = len(self.lista)
         for i in range(n):
@@ -44,17 +47,38 @@ class BubbleSort:
                 if self.lista[j] > self.lista[j + 1]:
                     # Intercambiar si el actual es mayor que el siguiente
                     self.lista[j], self.lista[j + 1] = self.lista[j + 1], self.lista[j]
-
     def obtener_lista_ordenada(self):
         return self.lista
 
 # Interacción con el usuario
 entrada = input("Ingresa una lista de números separados por comas: ")
 numeros = [int(n) for n in entrada.split(",")]
-
 # Crear una instancia de la clase y ordenar
 ordenador = BubbleSort(numeros)
 ordenador.ordenar()
-
 # Mostrar el resultado
 print(f"Lista ordenada: {ordenador.obtener_lista_ordenada()}")
+
+
+
+#practica para mejorar
+class bublesort2:
+    def __init__(self,listas):
+        self.listas =listas
+
+    def ordenarlista(self):
+        num = len(self.listas)
+        for i in range(num):
+            for j in range(0,num, -i -1) :
+                if self.listas[j] > self.listas[j + 1] :
+                    self.listas[j], self.listas[j + 1] = self[j + 1], self.listas[j]
+    def obteniendo_la_list(self):
+        return self.listas
+        
+
+list_num = input("ingrese una lista de numeros separados por ,: ")
+numeros_ingresados = [int(num) for num in list_num.split(",")]
+ordenamiento = bublesort2(numeros)
+ordenamiento.ordenarlista()
+
+print(f"lista ordenada: {ordenamiento.obteniendo_la_list()}")
